@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style/main.css">
+</head>
+<body>
+<h1>Index of <i><%= title %></i></h1>
+<ul>
+  <% contents.forEach(element => { %>
+    <li><a href="<%= element.href %>" <%= (element.href === "#" ? "class=missingFile" : "") %> ><%= element.label %></a></li>
+  <% }) %>
+</ul>
+</body>
+</html>

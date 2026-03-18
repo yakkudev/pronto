@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style/main.css">
+</head>
+<body id="dark">
+ <div class="replyBox">
+  <h2><%= title %></h2>
+  <form action="/<%= title %>" method="post">
+    <textarea name="input" id="input" cols="30" rows="10" placeholder="input"><%= input %></textarea>
+    <br>
+    <br>
+    <input type="text" name="key" id="key" placeholder="key" value="<%= key %>">
+    <br>
+    <br>
+    <button type="submit">use</button>
+    <hr>
+    <textarea name="output" id="output" cols="30" rows="10" placeholder="output"><%= output %></textarea>
+  </form>
+ </div> 
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style/main.css">
+</head>
+<body id="dark">
+
+<div class="posts">
+  <% posts.forEach(post => { %>
+    <div class="forumPost">
+      <b><%= post.username %></b>
+      <p><%= post.content %></p>
+      <% if (post.image !== "") { %>
+        <img src="<%= post.image %>" width="250px">
+      <% } %>
+    </div>
+  <% }) %>
+</div>
+
+
+<% if (doRenderReply) { %>
+  <form method="get" class="replyBox">
+    <label for="username">username</label>
+    <input type="text" name="username" id="username">
+    <br>
+    <label for="reply">reply</label>
+    <br>
+    <textarea name="reply" id="reply" cols="30" rows="10"></textarea>
+    <br>
+    <button type="submit">POST Reply!</button>
+  </form>
+<% } else { %>
+  <div class="replyBox">
+    <i>Closed after 10 weeks of inactivity.</i>
+  </div>
+<% } %>
+
+</div>
+</body>
+</html>
